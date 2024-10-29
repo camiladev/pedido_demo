@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: pedidos
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_pedido
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+#  flyway:
+#    enabled: true
+#    locations: classpath:db/migration
+  springfox:
+    documentation:
+      swagger-ui:
+        enabled: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
